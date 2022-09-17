@@ -25,6 +25,11 @@ const QaSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  addedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "users",
+    require: true,
+  },
   createdAt: {
     type: String,
     default: Date.now,

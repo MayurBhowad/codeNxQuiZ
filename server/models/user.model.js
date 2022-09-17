@@ -17,6 +17,10 @@ const UserSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  addedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "users",
+  },
   createdAt: {
     type: String,
     default: Date.now,
